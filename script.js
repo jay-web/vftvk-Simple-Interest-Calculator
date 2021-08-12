@@ -1,5 +1,8 @@
 let principal = document.getElementById("principal");
 let rateOfInterest = document.getElementById("rate");
+let result = document.querySelector("#result");
+
+
 let noOfYears;
 let form = document.querySelector("form");
 
@@ -7,6 +10,7 @@ window.onload = () => {
   principal.focus();
   // setting value of range slider to display on page
   document.getElementById("rangeValue").innerHTML = rateOfInterest.value + "%";  
+  result.style.display = "none";
 
   // setting value of slider on change event
   rateOfInterest.addEventListener("change", () => {
@@ -29,11 +33,17 @@ function compute(e) {
       principal.focus();
       return;
     }
-    let output = principal.value * ( parseFloat(rateOfInterest.value) / 100) * years;
-    let message = `If you deposit ${principal.value},
-                    at the interest rate of ${rateOfInterest.value}%. 
-                    You will receive an amount of ${output},
-                    in the year ${new Date().getFullYear() + years}.`
+    let output = principalAmount * ( parseFloat(rateOfInterest.value) / 100) * years;
+    result.style.display = "block";
+    let message = `If you deposit <span>${principal.value}</span>,
+                    at the interest rate of <span>${rateOfInterest.value}</span>%. 
+                    You will receive an amount of <span>${output}</span>,
+                    in the year <span>${new Date().getFullYear() + years}</span>.`
+
+
+    
+
+
 
     document.getElementById("result").innerHTML = message;
 

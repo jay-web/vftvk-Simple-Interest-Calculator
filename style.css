@@ -29,7 +29,9 @@ form{
   
    
 }
-
+#result span{
+    background-color: yellow;
+}
 .rangeInput{
     display: flex;
     justify-content: space-between;
@@ -42,7 +44,7 @@ form{
     
 
 }
-.message span{
+#result{
     margin-left: 40%;
 }
 
