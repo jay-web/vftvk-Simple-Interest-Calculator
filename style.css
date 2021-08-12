@@ -1,4 +1,57 @@
-body {background-color:tan;}
-h1{color:green;}
+body {
+    background-color:black;
+    box-sizing: border-box;
+    align-items: center;
+}
+h1{color:gray;}
+
+#main{
+    padding: 2rem;
+    background-color: white;
+    /* text-align: center; */
+    width: 50%;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.inputs{
+    display: flex;
+    justify-content: space-between;
+  
+    margin-bottom: 1rem;
+}
 
 
+
+form{
+    width: 70%;
+  
+   
+}
+
+.rangeInput{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.message{
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+.message span{
+    margin-left: 40%;
+}
+
+@media only screen and (max-width: 800px){
+#main{
+    width: 90%;
+}
+form{
+    width: 80%;
+   
+}
+}
