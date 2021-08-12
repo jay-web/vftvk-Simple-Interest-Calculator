@@ -23,7 +23,11 @@ function compute(e) {
     
     noOfYears = document.getElementById("years");
     let years = parseInt(noOfYears.options[noOfYears.selectedIndex].text);
-    
+    let principalAmount  = principal.value;
+    if(principalAmount <= 0){
+      alert("Please enter the positive amount as principal");
+      return;
+    }
     let output = principal.value * ( parseFloat(rateOfInterest.value) / 100) * years;
     let message = `If you deposit ${principal.value},
                     at the interest rate of ${rateOfInterest.value}%. 
