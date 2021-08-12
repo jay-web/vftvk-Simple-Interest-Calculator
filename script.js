@@ -4,7 +4,7 @@ let noOfYears;
 let form = document.querySelector("form");
 
 window.onload = () => {
-  
+  principal.focus();
   // setting value of range slider to display on page
   document.getElementById("rangeValue").innerHTML = rateOfInterest.value + "%";  
 
@@ -26,6 +26,7 @@ function compute(e) {
     let principalAmount  = principal.value;
     if(principalAmount <= 0){
       alert("Please enter the positive amount as principal");
+      principal.focus();
       return;
     }
     let output = principal.value * ( parseFloat(rateOfInterest.value) / 100) * years;
